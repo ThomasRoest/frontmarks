@@ -1,0 +1,2 @@
+# frontmarks
+Frontend resources collection
