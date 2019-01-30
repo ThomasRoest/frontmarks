@@ -26,21 +26,6 @@ module.exports = {
         }, {
             test: /\.svg$/,
             loader: 'raw-loader'
-        }, {
-            test: /\.pcss$/,
-            include: APP_DIR,
-            use: [{
-                loader: 'style-loader'
-            }, {
-                loader: 'css-loader',
-                options: {
-                    modules: true,
-                    namedExport: true,
-                    localIdentName: '[name]-[local]-[hash:base64:5]',
-                }
-            }, {
-                loader: 'postcss-loader'
-            }]
         }]
     },
     watchOptions: {
