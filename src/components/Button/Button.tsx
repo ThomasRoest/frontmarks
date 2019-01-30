@@ -1,10 +1,11 @@
 import React from 'react';
+import Icon from 'components/Icon';
 import * as S from './Button.styles';
 import * as T from './Button.types';
 
 class Button extends React.PureComponent<T.Props> {
   render() {
-    const { text, onClick, type, variant, className, href, target, wide } = this.props;
+    const { text, onClick, type, variant, className, href, target, wide, icon } = this.props;
     const Root: React.ComponentType = href ? S.RootLink : S.Root;
     let tagProps: object = { className, onClick, variant, wide };
 
@@ -13,7 +14,8 @@ class Button extends React.PureComponent<T.Props> {
 
     return (
       <Root {...tagProps}>
-        { text }
+        { icon && <S.Icon><Icon {...icon} /></S.Icon> }
+        <S.Text>{ text }</S.Text>
       </Root>
     );
   }

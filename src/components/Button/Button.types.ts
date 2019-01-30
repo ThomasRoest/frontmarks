@@ -1,3 +1,5 @@
+import * as TIcon from 'components/Icon/Icon.types';
+
 export type Props = {
   text: string,
   onClick?: () => void,
@@ -7,6 +9,7 @@ export type Props = {
   target?: string,
   variant?: 'twitter',
   wide?: boolean,
+  icon?: TIcon.Props,
 };
 
 export type StyledProps = Pick<Props, 'wide' | 'variant'>;

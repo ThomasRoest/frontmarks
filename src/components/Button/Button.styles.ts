@@ -51,3 +51,14 @@ export const Root = styled.button`
 `;
 
 export const RootLink = Root.withComponent('a');
+
+export const Icon = styled.span`
+  margin-right: ${spacing.dp2}px;
+  display: inline-block;
+  vertical-align: middle
+`;
+
+export const Text= styled.span`
+  display: inline-block;
+  vertical-align: middle;
+`;

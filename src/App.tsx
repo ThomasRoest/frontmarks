@@ -8,7 +8,8 @@ class App extends React.PureComponent {
       <Container>
         Hello world!
         <Button wide text="Suggest more" />
-        <Button wide variant="twitter" text="Suggest more" />
+        <Button wide variant="twitter" text="Tweet" icon={{ name: 'twitter' }} />
+        <Button variant="twitter" text="Tweet" icon={{ name: 'twitter' }} />
       </Container>
     );
   }
