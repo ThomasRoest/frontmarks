@@ -1,7 +1,14 @@
 {
+  "name": "frontmarks",
+  "private": true,
+  "version": "1.0.0",
+  "main": "./src/index.tsx",
+  "license": "MIT",
   "dependencies": {
+    "@types/classnames": "^2.2.7",
     "@types/react": "^16.7.22",
     "@types/react-dom": "^16.0.11",
+    "classnames": "^2.2.6",
     "css-loader": "^2.1.0",
     "postcss-loader": "^3.0.0",
     "raw-loader": "^1.0.0",
@@ -9,7 +16,16 @@
     "react-dom": "^16.7.0",
     "style-loader": "^0.23.1",
     "ts-loader": "^5.3.3",
+    "tslint": "^5.12.1",
+    "tslint-config-airbnb": "^5.11.1",
     "typescript": "^3.2.4",
-    "webpack": "^4.29.0"
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --host 0.0.0.0",
+    "lint": "tslint -c tslint.json 'src/**/*'"
   }
 }

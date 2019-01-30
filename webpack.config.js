@@ -12,7 +12,7 @@ module.exports = {
         publicPath: JS_PUBLIC_PATH
     },
     resolve: {
-        modules: [APP_DIR, path.resolve(__dirname, '../node_modules')],
+        modules: [APP_DIR, path.resolve(__dirname, './node_modules')],
         extensions: ['.js', '.json', '.ts', '.tsx', '.pcss']
     },
     devtool: 'source-map',

@@ -1,0 +1,19 @@
+{
+  "extends": "tslint-config-airbnb",
+  "rules": {
+    "import-name": { "severity": "off" },
+    "no-boolean-literal-compare": { "severity": "off" },
+    "align": { "severity": "off" },
+    "prefer-array-literal": { "severity": "off" },
+    "max-line-length": [true, 120],
+    "object-shorthand-properties-first": { "severity": "off" },
+    "variable-name": false,
+    "ter-arrow-parens": false
+  },
+  "linterOptions": {
+    "exclude": [
+      "src/**/*.pcss",
+      "src/**/*.svg"
+    ]
+  }
+}

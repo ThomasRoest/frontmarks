@@ -1,3 +1,6 @@
+src/public/js
 node_modules
 .idea
+
 .DS_Store
+yarn-error.log
