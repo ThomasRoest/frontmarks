@@ -1,6 +1,9 @@
 export const colors = {
   white: '#fff',
+
   gray: '#999',
+  grayLight: '#f4f5f7',
+
   black: '#333',
 
   blueLight: '#1B9CFC',
@@ -21,6 +24,7 @@ export const spacing = {
   dp: 4,
   dp2: 8,
   dp3: 12,
+  dp4: 16,
   dp5: 20,
   dp6: 24,
   dp10: 40,

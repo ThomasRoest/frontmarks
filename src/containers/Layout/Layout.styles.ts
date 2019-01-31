@@ -13,7 +13,8 @@ export const Inner = styled.div`
 
 export const Menu = styled.div`
   width: ${spacing.dp * 40}px;
-  padding-right: ${spacing.dp5}px;
+  min-width: ${spacing.dp * 40}px;
+  padding-right: ${spacing.dp10}px;
 `;
 
 export const Content = styled.div`
