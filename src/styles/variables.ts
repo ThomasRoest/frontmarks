@@ -27,7 +27,7 @@ export const spacing = {
 };
 
 export const font = {
-  family: 'Source Sans Prop, Arial, sans-serif',
+  family: 'Source Sans Pro, Arial, sans-serif',
 
   weightRegular: 400,
   weightBold: 700,

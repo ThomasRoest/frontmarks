@@ -3,12 +3,13 @@ import Layout from 'containers/Layout';
 import Button from 'components/Button';
 import Text from 'components/Text';
 import Menu from 'components/Menu';
+import Group from 'components/Group';
 import GlobalStyles from 'styles/global';
 
 class App extends React.PureComponent {
   renderMenu() {
     return (
-      <React.Fragment>
+      <Group>
         <Menu
           items={[{
             text: 'All resources'
@@ -18,11 +19,14 @@ class App extends React.PureComponent {
             text: 'Frontend news'
           }]}
         />
-        <Button text="Suggest more" wide />
-        <Text variant="caption" color="gray">
-          Build by <a href="https://bananabobby.github.io" target="_blank">Dmitry Belyaev</a>
-        </Text>
-      </React.Fragment>
+
+        <Group>
+          <Button text="Suggest more" wide />
+          <Text variant="caption" color="gray">
+            Built by <a href="https://bananabobby.github.io" target="_blank">Dmitry Belyaev</a>
+          </Text>
+        </Group>
+      </Group>
     );
   }
 
