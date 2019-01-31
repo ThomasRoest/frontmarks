@@ -1,6 +1,10 @@
 export const colors = {
   white: '#fff',
+  gray: '#999',
   black: '#333',
+
+  blueLight: '#1B9CFC',
+
   yellow: '#FFD257',
   yellowLight: '#FFE359',
 
@@ -16,6 +20,8 @@ export const radius = {
 export const spacing = {
   dp: 4,
   dp2: 8,
+  dp3: 12,
+  dp5: 20,
   dp6: 24,
   dp10: 40,
 };
@@ -24,7 +30,7 @@ export const font = {
   family: 'Source Sans Prop, Arial, sans-serif',
 
   weightRegular: 400,
-  weightBold: 600,
+  weightBold: 700,
 
   captionSize: 12,
   captionLineHeight: 16,

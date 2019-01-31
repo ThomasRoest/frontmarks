@@ -8,6 +8,7 @@ export const Root = styled.button`
   box-sizing: border-box;
   text-decoration: none;
   background: ${colors.yellow};
+  color: ${colors.black};
   padding: 0 ${spacing.dp6}px;
   box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
   color: ${colors.black};
