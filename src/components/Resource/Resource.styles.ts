@@ -34,11 +34,18 @@ export const Tags = styled.div`
 `;
 
 export const Tag = styled.div`
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.3);
   color: ${colors.white};
-  padding: 0 ${spacing.dp2}px;
+  padding: 0 ${spacing.dp}px;
   border-radius: ${radius.small}px;
   ${fontSets.caption}
+`;
+
+export const Like = styled.div`
+  position: absolute;
+  color: ${colors.white};
+  right: ${spacing.dp2}px;
+  bottom: ${spacing.dp2}px;
 `;
 
 export const Title = styled.div`

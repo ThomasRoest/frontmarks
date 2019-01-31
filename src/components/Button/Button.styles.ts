@@ -14,7 +14,7 @@ export const Root = styled.button`
   color: ${colors.black};
   cursor: pointer;
   border: 0;
-  border-radius: ${radius.small}px;
+  border-radius: ${radius.medium}px;
   transition: 0.15s ease-in-out;
   transition-property: background, transform, box-shadow;
   position: relative;
@@ -49,6 +49,17 @@ export const Root = styled.button`
       background: ${colors.twitterLight};
     }
   `}
+  
+  ${(props: T.StyledProps) => props.variant === 'transparent' && css`
+    background: transparent;
+    box-shadow: none;
+    
+    &:hover {
+      background: rgba(0, 0, 0, 0.08);
+      transform: none;
+      box-shadow: none;
+    }
+  `}
 `;
 
 export const RootLink = Root.withComponent('a');
@@ -56,10 +67,15 @@ export const RootLink = Root.withComponent('a');
 export const Icon = styled.span`
   margin-right: ${spacing.dp2}px;
   display: inline-block;
-  vertical-align: middle
+  vertical-align: middle;
+  line-height: 0;
 `;
 
-export const Text= styled.span`
+export const Text = styled.span`
   display: inline-block;
   vertical-align: middle;
+`;
+
+export const Postfix = styled.span`
+  color: ${colors.gray};
 `;

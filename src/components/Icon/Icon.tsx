@@ -4,11 +4,11 @@ import * as T from './Icon.types';
 
 class Icon extends React.PureComponent<T.Props> {
   render() {
-    const { name } = this.props;
+    const { name, color } = this.props;
     const svg = require(`./icons/${name}.svg`);
 
     return (
-      <S.Root dangerouslySetInnerHTML={{ __html: svg }} />
+      <S.Root dangerouslySetInnerHTML={{ __html: svg }} color={color} />
     );
   }
 }

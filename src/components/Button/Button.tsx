@@ -5,7 +5,7 @@ import * as T from './Button.types';
 
 class Button extends React.PureComponent<T.Props> {
   render() {
-    const { text, onClick, type, variant, className, href, target, wide, icon } = this.props;
+    const { text, onClick, type, variant, className, href, target, wide, icon, postfix } = this.props;
     const Root: React.ComponentType = href ? S.RootLink : S.Root;
     let tagProps: object = { className, onClick, variant, wide };
 
@@ -16,6 +16,7 @@ class Button extends React.PureComponent<T.Props> {
       <Root {...tagProps}>
         { icon && <S.Icon><Icon {...icon} /></S.Icon> }
         <S.Text>{ text }</S.Text>
+        { postfix && <S.Postfix>&nbsp;&middot;&nbsp;{ postfix }</S.Postfix> }
       </Root>
     );
   }

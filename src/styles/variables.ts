@@ -8,6 +8,8 @@ export const colors = {
 
   blueLight: '#1B9CFC',
 
+  red: '#ee5253',
+
   yellow: '#FFD257',
   yellowLight: '#FFE359',
 
@@ -17,7 +19,7 @@ export const colors = {
 
 export const radius = {
   small: 2,
-  medium: 4,
+  medium: 3,
 };
 
 export const spacing = {
@@ -27,6 +29,7 @@ export const spacing = {
   dp4: 16,
   dp5: 20,
   dp6: 24,
+  dp8: 32,
   dp10: 40,
 };
 
@@ -42,6 +45,9 @@ export const font = {
   bodySize: 14,
   bodyLineHeight: 20,
 
+  leadSize: 16,
+  leadLineHeight: 20,
+
   headingSize: 20,
   headingLineHeight: 28,
 };
@@ -54,6 +60,10 @@ export const fontSets = {
   body: `
     font-size: ${font.bodySize}px;
     line-height: ${font.bodyLineHeight}px;
+  `,
+  lead: `
+    font-size: ${font.leadSize}px;
+    line-height: ${font.leadLineHeight}px;
   `,
   heading: `
     font-size: ${font.headingSize}px;

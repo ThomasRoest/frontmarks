@@ -7,9 +7,10 @@ export type Props = {
   className?: string,
   href?: string,
   target?: string,
-  variant?: 'twitter',
+  variant?: 'twitter' | 'transparent',
   wide?: boolean,
   icon?: TIcon.Props,
+  postfix?: string,
 };
 
 export type StyledProps = Pick<Props, 'wide' | 'variant'>;
