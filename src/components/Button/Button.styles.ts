@@ -78,4 +78,6 @@ export const Text = styled.span`
 
 export const Postfix = styled.span`
   color: ${colors.gray};
+  display: inline-block;
+  vertical-align: middle;
 `;

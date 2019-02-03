@@ -6,7 +6,7 @@ import Menu from 'components/Menu';
 import Group from 'components/Group';
 import Grid from 'components/Grid';
 import GridItem from 'components/GridItem';
-import Resource from 'components/Resource';
+import Resource from 'containers/Resource';
 import GlobalStyles from 'styles/global';
 
 class App extends React.PureComponent {
@@ -38,13 +38,16 @@ class App extends React.PureComponent {
       <Grid>
         {
           [1,2,3,4,5,6,7,8].map(_ => (
-            <GridItem>
+            <GridItem key={_}>
               <Resource
-                src=""
-                title="Booking Design system"
-                text="Our design system helps us work together to build a great experience for all of Shopify’s merchants."
-                href="#"
-                tags={[{ text: 'React' }]}
+                data={{
+                  id: _.toString(),
+                  src: '',
+                  title: 'Booking Design system',
+                  text: 'Our design system helps us work together to build a great experience for all of Shopify’s merchants.',
+                  href: '#',
+                  tags: [{ text: 'React' }],
+                }}
               />
             </GridItem>
           ))

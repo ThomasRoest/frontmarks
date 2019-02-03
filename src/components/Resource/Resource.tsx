@@ -5,7 +5,7 @@ import * as T from './Resource.types';
 
 class Resource extends React.PureComponent<T.Props> {
   render() {
-    const { title, text, href, src, tags, onLike, onDislike } = this.props;
+    const { title, text, href, src, tags, onLike, onDislike, liked } = this.props;
 
     return (
       <S.Root href={href}>
@@ -23,6 +23,7 @@ class Resource extends React.PureComponent<T.Props> {
 
             <S.Like>
               <IconToggle
+                active={liked}
                 iconOff={{ name: 'heart-border' }}
                 iconOn={{ name: 'heart', color: 'red' }}
                 onToggleOn={onLike}

@@ -3,24 +3,16 @@ import Icon from 'components/Icon';
 import * as T from './IconToggle.types';
 import * as S from './IconToggle.styles';
 
-class IconToggle extends React.PureComponent<T.Props, T.State> {
-  state = {
-    active: this.props.defaultActive || false,
-  };
-
+class IconToggle extends React.PureComponent<T.Props> {
   handleClick = () => {
-    const { onToggleOn, onToggleOff } = this.props;
-    const { active } = this.state;
-    const nextActive = !active;
+    const { onToggleOn, onToggleOff, active } = this.props;
 
-    this.setState({ active: nextActive });
-    if (nextActive && onToggleOn) onToggleOn();
-    if (!nextActive && onToggleOff) onToggleOff();
+    if (!active && onToggleOn) onToggleOn();
+    if (active && onToggleOff) onToggleOff();
   };
 
   render() {
-    const { iconOff, iconOn } = this.props;
-    const { active } = this.state;
+    const { iconOff, iconOn, active } = this.props;
 
     return (
       <S.Root active={active} onClick={this.handleClick}>
