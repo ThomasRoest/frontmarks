@@ -8,9 +8,9 @@ class Resource extends React.PureComponent<T.Props, T.State> {
   constructor(props: T.Props) {
     super(props);
     const { data } = props;
-    const lsValue = getValue(FAVORITES);
+    const value = getValue(FAVORITES);
 
-    const liked = !lsValue ? false : JSON.parse(lsValue).includes(data.id);
+    const liked = !value ? false : value.includes(data.id);
 
     this.state = { liked };
   }

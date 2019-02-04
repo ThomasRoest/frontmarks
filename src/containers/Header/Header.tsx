@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import Group from 'components/Group';
 import Button from 'components/Button';
 import { subscribe } from 'utilities/storage';
@@ -19,6 +20,12 @@ class Header extends React.PureComponent<T.Props, T.State> {
     });
   }
 
+  handleFavoritesClick = () => {
+    const { history } = this.props;
+
+    history.push('/favorites');
+  }
+
   render() {
     const { favoritesCount } = this.state;
 
@@ -33,6 +40,7 @@ class Header extends React.PureComponent<T.Props, T.State> {
               variant="transparent"
               text="Favorites"
               icon={{ name: 'heart' }}
+              onClick={this.handleFavoritesClick}
               postfix={favoritesCount.toString()}
             />
 
@@ -44,8 +52,8 @@ class Header extends React.PureComponent<T.Props, T.State> {
           </Group>
         </S.Actions>
       </S.Root>
-    )
+    );
   }
 }
 
-export default Header;
+export default withRouter(Header);

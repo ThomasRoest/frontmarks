@@ -13,16 +13,16 @@ export const setValue: SetValue = (key, value) => {
 };
 
 export const getValue: GetValue = (key) => {
-  return localStorage.getItem(key);
+  const lsValue = localStorage.getItem(key);
+
+  if (!lsValue) return null;
+
+  return JSON.parse(lsValue);
 };
 
 export const subscribe: Subscribe = (key, callback) => {
   if (!storage[key]) storage[key] = [];
   storage[key].push(callback);
 
-  const lsValue = getValue(key);
-
-  if (!lsValue) return;
-
-  callback(JSON.parse(lsValue));
+  callback(getValue(key));
 };

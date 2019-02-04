@@ -4,9 +4,9 @@ import * as S from './Group.styles';
 
 class Group extends React.PureComponent<T.Props> {
   render() {
-    const { inline, children } = this.props;
+    const { inline, children, size } = this.props;
 
-    return <S.Root inline={inline}>{ children }</S.Root>;
+    return <S.Root inline={inline} size={size}>{ children }</S.Root>;
   }
 }
 

@@ -5,7 +5,7 @@ import * as T from './Group.types';
 export const Root = styled.div`
   & > * {
     display: block;
-    margin-top: ${spacing.dp5}px;
+    margin-top: ${(props: T.StyledProps) => props.size === 'small' ? spacing.dp2 : spacing.dp5}px;
 
     &:first-child {
       margin-top: 0;
@@ -17,7 +17,7 @@ export const Root = styled.div`
       display: inline-block;
       vertical-align: top;
       margin-top: 0;
-      margin-right: ${spacing.dp5}px;
+      margin-right: ${spacing.dp2}px;
     }
   `}
 `;

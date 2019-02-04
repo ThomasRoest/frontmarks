@@ -1,58 +1,51 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Layout from 'containers/Layout';
-import Button from 'components/Button';
 import Text from 'components/Text';
 import Menu from 'components/Menu';
 import Group from 'components/Group';
-import Grid from 'components/Grid';
-import GridItem from 'components/GridItem';
-import Resource from 'containers/Resource';
 import GlobalStyles from 'styles/global';
+import { response as sectionsResponse } from 'data/sections';
+import RouteFavorites from 'routes/RouteFavorites';
+import RouteSection from 'routes/RouteSection';
+import RouteHome from 'routes/RouteHome';
+import Route404 from 'routes/Route404';
 
-class App extends React.PureComponent {
-  renderMenu() {
+class App extends React.Component {
+  renderMenu = () => {
+    const items = sectionsResponse.map(item => ({
+      text: item.text,
+      href: `/section/${item.id}/`,
+    }));
+
+    items.unshift({ text: 'All resources', href: '/' });
+
     return (
       <Group>
-        <Menu
-          items={[{
-            text: 'All resources'
-          }, {
-            text: 'Design systems'
-          }, {
-            text: 'Frontend news'
-          }]}
-        />
+        <Menu items={items} />
 
-        <Group>
-          <Button text="Suggest more" wide />
-          <Text variant="caption" color="gray">
-            Built by <a href="https://bananabobby.github.io" target="_blank">Dmitry Belyaev</a>
-          </Text>
-        </Group>
+        <Text variant="caption" color="gray">
+          <Group size="small">
+            <div>
+              <a href="mailto:blv.dmitry@gmail.com" target="_blank">Suggest more</a>
+            </div>
+            <div>
+              Built by <a href="https://bananabobby.github.io" target="_blank">Dmitry Belyaev</a>
+            </div>
+          </Group>
+        </Text>
       </Group>
     );
   }
 
-  renderContent() {
+  renderContent = () => {
     return (
-      <Grid>
-        {
-          [1,2,3,4,5,6,7,8].map(_ => (
-            <GridItem key={_}>
-              <Resource
-                data={{
-                  id: _.toString(),
-                  src: '',
-                  title: 'Booking Design system',
-                  text: 'Our design system helps us work together to build a great experience for all of Shopify’s merchants.',
-                  href: '#',
-                  tags: [{ text: 'React' }],
-                }}
-              />
-            </GridItem>
-          ))
-        }
-      </Grid>
+      <Switch>
+        <Route exact component={RouteFavorites} path="/favorites/" />
+        <Route exact component={RouteSection} path="/section/:sectionId/" />
+        <Route exact component={RouteHome} path="/" />
+        <Route component={Route404} path="/" />
+      </Switch>
     );
   }
 
@@ -60,7 +53,13 @@ class App extends React.PureComponent {
     return (
       <React.Fragment>
         <GlobalStyles />
-        <Layout content={this.renderContent()} menu={this.renderMenu()} />
+
+        <Router>
+          <Layout
+            content={this.renderContent()}
+            menu={this.renderMenu()}
+          />
+        </Router>
       </React.Fragment>
     );
   }
