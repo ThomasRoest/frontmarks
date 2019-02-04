@@ -2,8 +2,23 @@ import styled from 'styled-components';
 import { colors, fontSets, font, radius, spacing } from 'styles/variables';
 import * as T from './Resource.types';
 
-export const Root = styled.a`
+export const Root = styled.div`
   color: ${colors.black};
+  position: relative;
+`;
+
+export const Layer = styled.a`
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  text-decoration: none;
+
+  &:hover:after {
+    content: none;
+  }
 `;
 
 export const Top = styled.div`
@@ -43,6 +58,7 @@ export const Tag = styled.div`
 
 export const Like = styled.div`
   position: absolute;
+  z-index: 3;
   color: ${colors.white};
   right: ${spacing.dp2}px;
   bottom: ${spacing.dp2}px;

@@ -8,7 +8,8 @@ class Resource extends React.PureComponent<T.Props> {
     const { title, text, href, src, tags, onLike, onDislike, liked } = this.props;
 
     return (
-      <S.Root href={href}>
+      <S.Root>
+        <S.Layer href={href} target="_blank" />
         <S.Top>
           <S.TopInner>
             <S.Image src={src} />

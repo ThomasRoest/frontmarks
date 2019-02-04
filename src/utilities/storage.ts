@@ -1,7 +1,7 @@
 type Callback = (value: any) => void;
 type Storage = { [key:string]: Array<Callback> };
 type SetValue = (key: string, value: any) => void;
-type GetValue = (key: string) => string | null;
+type GetValue = (key: string) => any | null;
 type Subscribe = (key: string, callback: Callback) => void;
 
 const storage: Storage = {};

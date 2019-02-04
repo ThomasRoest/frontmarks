@@ -17,8 +17,7 @@ class Resource extends React.PureComponent<T.Props, T.State> {
 
   handleLike = () => {
     const { data } = this.props;
-    const lsValue = getValue(FAVORITES);
-    const value = lsValue ? JSON.parse(lsValue) : [];
+    const value = getValue(FAVORITES) || [];
 
     setValue(FAVORITES,[...value, data.id]);
     this.setState({ liked: true });
@@ -26,13 +25,11 @@ class Resource extends React.PureComponent<T.Props, T.State> {
 
   handleDislike = () => {
     const { data } = this.props;
-    const lsValue = getValue(FAVORITES);
+    const value = getValue(FAVORITES);
 
-    if (!lsValue) return;
+    if (!value) return;
 
-    const value = JSON.parse(lsValue).filter((id: string) => id !== data.id);
-
-    setValue(FAVORITES, value);
+    setValue(FAVORITES, value.filter((id: string) => id !== data.id));
     this.setState({ liked: false });
   };
 
