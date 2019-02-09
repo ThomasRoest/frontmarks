@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-155.000000, -1870.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="logo" transform="translate(155.000000, 1870.000000)">
+                <path d="M37.5,33.75 L37.5,0 L82.5,0 L82.5,33.75 L37.5,33.75 Z M82.5,52.5 L120,52.5 L120,120 L0,120 L0,52.5 L37.5,52.5 L37.5,86.25 L82.5,86.25 L82.5,52.5 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
