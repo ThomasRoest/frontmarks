@@ -13,7 +13,7 @@ export const entities: Entities = {
   [ids.books]: { text: 'Books' },
   [ids.people]: { text: 'People' },
   [ids.conferenceTalks]: { text: 'Conference talks' },
-  [ids.developmnetTools]: { text: 'Development tools' },
+  [ids.developmentTools]: { text: 'Development tools' },
 };
 
 export const response = Object.keys(entities).map(id => ({ id, ...entities[id] }));

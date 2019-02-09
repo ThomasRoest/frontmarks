@@ -7,8 +7,7 @@ export enum ids {
   'books' = 'books',
   'people' = 'people',
   'conferenceTalks' = 'conference-talks',
-  'developmnetTools' = 'development-tools',
-  'libraries' = 'libraries',
+  'developmentTools' = 'development-tools',
 }
 
 export type Entity = {

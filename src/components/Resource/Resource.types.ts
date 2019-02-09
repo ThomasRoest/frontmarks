@@ -3,6 +3,7 @@ export type Tag = {
 };
 
 export type Props = {
+  full?: boolean,
   src: string,
   title: string,
   text: string,
@@ -12,3 +13,5 @@ export type Props = {
   onLike?: () => void,
   onDislike?: () => void,
 };
+
+export type StyledProps = { full: boolean };

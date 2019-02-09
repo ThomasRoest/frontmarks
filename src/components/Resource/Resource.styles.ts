@@ -1,18 +1,24 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { colors, fontSets, font, radius, spacing } from 'styles/variables';
+// import * as T from './Resource.types';
 
 export const Top = styled.div`
   position: relative;
   padding-top: 100%;
   background: #fff;
   border: 1px solid ${colors.grayLight};
-  border-radius: ${radius.medium}px;
+  border-radius: ${radius.large}px;
   overflow: hidden;
   margin-bottom: ${spacing.dp4}px;
   transition: 0.15s ease-in-out;
   transition-property: transform, box-shadow;
 `;
 
+export const Image = styled.img`
+  max-width: 70%;
+`;
+
+// TODO: Replace any with T.StyledProps
 export const Root = styled.div`
   color: ${colors.black};
   position: relative;
@@ -26,6 +32,14 @@ export const Root = styled.div`
     transform: translateY(-2px);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16);
   }
+
+  ${(props: any) => props.full && css`
+    ${Image} {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+    }
+  `}
 `;
 
 export const Layer = styled.a`
@@ -51,10 +65,6 @@ export const TopInner = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
-
-export const Image = styled.img`
-  max-width: 70%;
 `;
 
 export const Tags = styled.div`
@@ -93,5 +103,6 @@ export const Text = styled.div`
    -webkit-line-clamp: 4;
    -webkit-box-orient: vertical;
    overflow: hidden;
+   white-space: pre-wrap;
   ${fontSets.body};
 `;

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>jsconf-heart</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-586.000000, -4510.000000)" fill-rule="nonzero">
+            <g id="jsconf-heart" transform="translate(586.000000, 4510.000000)">
+                <path d="M7.2,120 L112.8,120 C116.7,120 120,116.7 120,112.8 L120,7.2 C120,3.3 116.7,0 112.8,0 L7.2,0 C3.3,0 0,3.3 0,7.2 L0,112.8 C0,116.7 3.3,120 7.2,120" id="Path" fill="#E10079"></path>
+                <path d="M54.3,63 C60.3,57 69.6,57.3 75.6,63 C81.6,57 90.9,57 96.9,63 C102.9,69 102.9,78 96.6,84.6 L75.9,105.3 C73.8,103.2 62.4,91.8 55.2,84.6 C48.3,78.3 48.3,69 54.3,63" id="Path" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

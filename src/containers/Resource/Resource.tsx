@@ -2,6 +2,7 @@ import React from 'react';
 import ResourceComponent from 'components/Resource';
 import { getValue, setValue } from 'utilities/storage';
 import { FAVORITES } from 'constants/lsKeys';
+import * as TSection from 'types/entities/Section';
 import * as T from './Resource.types';
 
 class Resource extends React.PureComponent<T.Props, T.State> {
@@ -39,6 +40,7 @@ class Resource extends React.PureComponent<T.Props, T.State> {
 
     return (
       <ResourceComponent
+        full={data.sectionId === TSection.ids.people}
         src={data.src}
         title={data.title}
         text={data.text}

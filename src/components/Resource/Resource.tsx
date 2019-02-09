@@ -5,10 +5,10 @@ import * as T from './Resource.types';
 
 class Resource extends React.PureComponent<T.Props> {
   render() {
-    const { title, text, href, src, tags, onLike, onDislike, liked } = this.props;
-
+    const { title, text, href, src, tags, onLike, onDislike, liked, full } = this.props;
     return (
-      <S.Root>
+      // @ts-ignore
+      <S.Root full={full}>
         <S.Layer href={href} target="_blank" />
         <S.Top>
           <S.TopInner>
@@ -35,7 +35,7 @@ class Resource extends React.PureComponent<T.Props> {
         <S.Title>{ title }</S.Title>
         <S.Text>{ text }</S.Text>
       </S.Root>
-    )
+    );
   }
 }
 

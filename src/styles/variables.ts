@@ -20,6 +20,7 @@ export const colors = {
 export const radius = {
   small: 2,
   medium: 3,
+  large: 4,
 };
 
 export const spacing = {

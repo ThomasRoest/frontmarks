@@ -35,25 +35,25 @@ export const Root = styled.button`
   &:active {
     top: 1px;
   }
-  
+
   ${(props: T.StyledProps) => props.wide && css`
     width: 100%;
     display: block;
   `}
-  
+
   ${(props: T.StyledProps) => props.variant === 'twitter' && css`
     background: ${colors.twitter};
     color: ${colors.white};
-    
+
     &:hover {
       background: ${colors.twitterLight};
     }
   `}
-  
+
   ${(props: T.StyledProps) => props.variant === 'transparent' && css`
     background: transparent;
     box-shadow: none;
-    
+
     &:hover {
       background: rgba(0, 0, 0, 0.08);
       transform: none;
