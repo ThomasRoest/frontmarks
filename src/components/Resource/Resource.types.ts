@@ -12,5 +12,3 @@ export type Props = {
   onLike?: () => void,
   onDislike?: () => void,
 };
-
-export type StyledImageProps = Pick<Props, 'src'>;

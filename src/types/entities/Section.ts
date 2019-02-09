@@ -1,14 +1,14 @@
 export enum ids {
   'designSystems' = 'design-systems',
+  'learningCourses' = 'learning-courses',
   'frontendNews' = 'frontend-news',
   'designFreebies' = 'design-freebies',
-  'learningCourses' = 'learning-courses',
   'podcasts' = 'podcasts',
   'books' = 'books',
-  'codeEditors' = 'code-editors',
-  'workflowTools' = 'workflow-tools',
-  'openSourcesPackages' = 'open-source-packages',
-  'testingTools' = 'testing-tools',
+  'people' = 'people',
+  'conferenceTalks' = 'conference-talks',
+  'developmnetTools' = 'development-tools',
+  'libraries' = 'libraries',
 }
 
 export type Entity = {

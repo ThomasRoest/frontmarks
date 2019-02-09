@@ -21,17 +21,16 @@ class Resource extends React.PureComponent<T.Props> {
                 </S.Tags>
               )
             }
-
-            <S.Like>
-              <IconToggle
-                active={liked}
-                iconOff={{ name: 'heart-border' }}
-                iconOn={{ name: 'heart', color: 'red' }}
-                onToggleOn={onLike}
-                onToggleOff={onDislike}
-              />
-            </S.Like>
           </S.TopInner>
+          <S.Like>
+            <IconToggle
+              active={liked}
+              iconOff={{ name: 'heart-border' }}
+              iconOn={{ name: 'heart', color: 'red' }}
+              onToggleOn={onLike}
+              onToggleOff={onDislike}
+            />
+          </S.Like>
         </S.Top>
         <S.Title>{ title }</S.Title>
         <S.Text>{ text }</S.Text>

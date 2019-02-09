@@ -11,10 +11,10 @@ export const entities: Entities = {
   [ids.learningCourses]: { text: 'Learning courses' },
   [ids.podcasts]: { text: 'Podcasts' },
   [ids.books]: { text: 'Books' },
-  [ids.codeEditors]: { text: 'Code editors' },
-  [ids.workflowTools]: { text: 'Workflow tools' },
-  [ids.openSourcesPackages]: { text: 'Open source packages' },
-  [ids.testingTools]: { text: 'Testing tools' },
+  [ids.people]: { text: 'People' },
+  [ids.conferenceTalks]: { text: 'Conference talks' },
+  [ids.developmnetTools]: { text: 'Development tools' },
+  [ids.libraries]: { text: 'Libraries' },
 };
 
 export const response = Object.keys(entities).map(id => ({ id, ...entities[id] }));
