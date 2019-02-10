@@ -8,7 +8,9 @@ type Props = RouteComponentProps<{ sectionId: string }>;
 
 export default (props: Props) => {
   const sectionId = props.match.params.sectionId;
-  const items = entities[sectionId] && response.filter(item => item.sectionId.toString() === sectionId);
+  const items = entities[sectionId] && response.filter(item => {
+    return item.sectionId.toString() === sectionId;
+  });
 
   return <ResourcesList items={items} />;
 };

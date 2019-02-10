@@ -36,6 +36,10 @@ export const Root = styled.button`
     top: 1px;
   }
 
+  &:after {
+    content: none;
+  }
+
   ${(props: T.StyledProps) => props.wide && css`
     width: 100%;
     display: block;

@@ -2,7 +2,7 @@ import * as TIcon from 'components/Icon/Icon.types';
 
 export type Props = {
   text: string,
-  onClick?: () => void,
+  onClick?: (e: Event) => void,
   type?: string,
   className?: string,
   href?: string,

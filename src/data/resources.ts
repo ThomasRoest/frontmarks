@@ -1,13 +1,49 @@
 import * as TResource from 'types/entities/Resource';
 import { ids } from 'types/entities/Section';
 
+type ResourceDict = { [id: number]: TResource.Entity };
+
+const getDict = (items: TResource.Entity[]): ResourceDict => {
+  return items.reduce((acc, cur) => ({ ...acc, [cur.id]: cur }), {});
+};
+
 /**
  * - Add new resources on top of the current list
  * - Never change existing ids, they might be shared
  */
 
 /* tslint:disable */
-export const response: TResource.Entity[] = [{
+export const order = [
+  "92","4","50","26",
+  "77","33","48","65",
+  "74","84", "25","63",
+  "43","93","22","88",
+  "52","68","13","97",
+  "28","11","10","99",
+  "46","39","7","55",
+  "45","76", "27","82",
+  "95","8","38","51",
+  "49","91","73","105",
+  "79","69","35","64",
+  "60","62","36","81",
+  "66","102", "44","17",
+  "24","72","75","6",
+  "37","16","101","32",
+  "3","23","61","12",
+  "31","70","5","71",
+  "100","42", "57","9",
+  "80","98","103","19",
+  "29","40","53","47",
+  "56","96","104","1",
+  "15","34","14","20",
+  "30","67", "54","58",
+  "83","78","89","2",
+  "0","90","87","21",
+  "18","59","86","94",
+  "41"
+];
+
+const developmentTools: ResourceDict = getDict([{
   id: '105',
   title: 'Carbon',
   text: 'Create and share beautiful images of your source code. Start typing or drop a file into the text area to get started.',
@@ -103,7 +139,9 @@ export const response: TResource.Entity[] = [{
   src: '/img/logos/development-tools/can-i-use.svg',
   sectionId: ids.developmentTools,
   tags: [{ text: 'Testing' }],
-}, {
+}]);
+
+const conferenceTalks: ResourceDict = getDict([{
   id: '93',
   title: 'In the loop',
   text: 'Jake Archibald - JSConf.Asia',
@@ -180,7 +218,9 @@ export const response: TResource.Entity[] = [{
   href: 'https://www.youtube.com/watch?v=Xt5qpbiqw2g',
   src: '/img/logos/conference-talks/front-trends.svg',
   sectionId: ids.conferenceTalks,
-}, {
+}]);
+
+const people: ResourceDict = getDict([{
   id: '81',
   title: 'Jason Miller',
   text: 'Creator of Preact',
@@ -264,7 +304,9 @@ export const response: TResource.Entity[] = [{
   href: 'https://twitter.com/markdalgleish',
   src: '/img/logos/people/mark-dalgleish.png',
   sectionId: ids.people,
-}, {
+}]);
+
+const books: ResourceDict = getDict([{
   id: '69',
   title: 'Front-End Developer Handbook',
   text: 'A guide that anyone could use to learn about the practice of front-end development. It broadly outlines and discusses the practice of front-end engineering: how to learn it and what tools are used when practicing it.',
@@ -311,7 +353,9 @@ export const response: TResource.Entity[] = [{
   src: '/img/logos/books/vue-handbook.svg',
   sectionId: ids.books,
   tags: [{ text: 'Vue' }],
-}, {
+}]);
+
+const podcasts: ResourceDict = getDict([{
   id: '63',
   title: 'Frontside',
   text: 'Dedicated to the art and science of thoughtfully executed software development.',
@@ -402,7 +446,9 @@ export const response: TResource.Entity[] = [{
   href: 'https://developeronfire.com/',
   src: '/img/logos/placeholder.svg',
   sectionId: ids.podcasts,
-}, {
+}]);
+
+const learningCourses = getDict([{
   id: '50',
   title: 'Frontloops',
   text: 'Learn frontend development by solving real-world tasks. You receive handcrafted challenges directly to your email.',
@@ -492,7 +538,9 @@ export const response: TResource.Entity[] = [{
   href: 'https://www.leveluptutorials.com/',
   src: '/img/logos/learning-courses/level-up.svg',
   sectionId: ids.learningCourses,
-}, {
+}]);
+
+const designFreebies: ResourceDict = getDict([{
   id: '38',
   title: 'Unsplash',
   text: 'Beautiful, free photos. Gifted by the world’s most generous community of photographers.',
@@ -588,7 +636,9 @@ export const response: TResource.Entity[] = [{
   src: '/img/logos/design-freebies/coverr.svg',
   sectionId: ids.designFreebies,
   tags: [{ text: 'Videos' }],
-}, {
+}]);
+
+const frontendNews: ResourceDict = getDict([{
   id: '26',
   title: 'Frontend Weekly',
   text: 'The best articles, links and news related to Frontend Development delivered once a week to your inbox.',
@@ -665,7 +715,9 @@ export const response: TResource.Entity[] = [{
   href: 'https://www.reddit.com/r/javascript/',
   src: '/img/logos/frontend-news/r-javascript.svg',
   sectionId: ids.frontendNews,
-}, {
+}]);
+
+const designSystems: ResourceDict = getDict([{
   id: '15',
   title: 'Ant Design',
   text: 'A design system with values of Nature and Determinacy for better user experience of enterprise applications.',
@@ -793,4 +845,18 @@ export const response: TResource.Entity[] = [{
   src: '/img/logos/design-systems/ratio.svg',
   tags: [{ text: 'React' }],
   sectionId: ids.designSystems,
-}];
+}]);
+
+export const dictionary = {
+  ...developmentTools,
+  ...conferenceTalks,
+  ...people,
+  ...books,
+  ...podcasts,
+  ...designFreebies,
+  ...frontendNews,
+  ...learningCourses,
+  ...designSystems,
+};
+
+export const response = order.map(id => dictionary[+id]);

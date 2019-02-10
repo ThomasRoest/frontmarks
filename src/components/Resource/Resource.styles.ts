@@ -71,7 +71,7 @@ export const TopInner = styled.div`
 
 export const Tags = styled.div`
    position: absolute;
-   top: ${spacing.dp2}px;
+   bottom: ${spacing.dp2}px;
    right: ${spacing.dp2}px;
 `;
 
@@ -90,7 +90,7 @@ export const Like = styled.div`
   pointer-events: all;
   color: ${colors.white};
   right: ${spacing.dp2}px;
-  bottom: ${spacing.dp2}px;
+  top: ${spacing.dp2}px;
 `;
 
 export const Title = styled.div`

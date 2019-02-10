@@ -37,7 +37,8 @@ class Resource extends React.PureComponent<T.Props, T.State> {
   render() {
     const { liked } = this.state;
     const { data } = this.props;
-    const href = `${data.href}?ref=frontmarks`;
+    const separator = data.href.includes('?') ? '&' : '?';
+    const href = `${data.href}${separator}ref=frontmarks`;
 
     return (
       <ResourceComponent
