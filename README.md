@@ -3,9 +3,9 @@
 Cureated frontend resources collection.
 Available at [frontmarks.com](https://frontmarks.com)
 
-## Contribution
+## Resources contribution
 
-There are 2 potential ways to contribute to the project:
+There are 2 potential ways to contribute to the project resources collection:
 
 1. You can [open an issue](https://github.com/BananaBobby/frontmarks/issues/new) with the resource or section you want to have on the website.
 2. You can send a pull request to the repo with the proposed changes to `src/data` files.
