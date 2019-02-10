@@ -32,7 +32,7 @@ class App extends React.Component {
               </a>
             </div>
             <div>
-              Built by <a href="https://bananabobby.github.io" target="_blank">Dmitry Belyaev</a>
+              Built by <a href="https://twitter.com/blv_dmitry" target="_blank">Dmitry Belyaev</a>
             </div>
           </Group>
         </Text>
