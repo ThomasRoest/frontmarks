@@ -2,6 +2,6 @@
   "name": "frontmarks",
   "alias": ["frontmarks.com", "www.frontmarks.com"],
   "routes": [
-    { "src": "/.*", "dest": "/public/index.html" },
+    { "src": "/.*", "dest": "/public/index.html" }
   ]
 }
