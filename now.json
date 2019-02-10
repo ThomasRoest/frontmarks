@@ -2,5 +2,5 @@
   "version": 2,
   "name": "frontmarks",
   "alias": ["frontmarks.com", "www.frontmarks.com"],
-  "builds": [{ "src": "./public", "use": "@now/static" }]
+  "builds": [{ "src": "public/*", "use": "@now/static" }]
 }
