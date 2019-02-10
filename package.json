@@ -27,7 +27,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development --host 0.0.0.0",
-    "deploy": "cd public && now && now alias && cd ..",
+    "deploy": "yarn build && cd public && now && now alias && cd ..",
     "lint": "tslint -c tslint.json 'src/**/*'"
   }
 }
