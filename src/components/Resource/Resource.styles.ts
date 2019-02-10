@@ -18,6 +18,10 @@ export const Top = styled.div`
 
 export const Image = styled.img`
   max-width: 70%;
+
+  @media (max-width: 850px) {
+    max-width: 55%;
+  }
 `;
 
 // TODO: Replace any with T.StyledProps

@@ -55,7 +55,7 @@ export const Root = styled.button`
   `}
 
   ${(props: T.StyledProps) => props.variant === 'transparent' && css`
-    background: transparent;
+    background: rgba(0, 0, 0, 0.04);
     box-shadow: none;
 
     &:hover {

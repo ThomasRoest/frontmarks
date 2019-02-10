@@ -27,7 +27,9 @@ class App extends React.Component {
         <Text variant="caption" color="gray">
           <Group size="small">
             <div>
-              <a href="https://github.com/BananaBobby/frontmarks/blob/master/README.md#contribution" target="_blank">Suggest more</a>
+              <a href="https://github.com/BananaBobby/frontmarks/blob/master/README.md#contribution" target="_blank">
+                Suggest more
+              </a>
             </div>
             <div>
               Built by <a href="https://bananabobby.github.io" target="_blank">Dmitry Belyaev</a>

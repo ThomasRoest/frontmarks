@@ -30,7 +30,7 @@ class Header extends React.PureComponent<T.Props, T.State> {
     const { favorites } = this.state;
     const text = favorites.length
       ? 'Check out my favorite frontend resources on Frontmarks'
-      : 'Frontmarks - frontend resources collection. Get on board and save your favorites.';
+      : 'Frontmarks - curated frontend resources collection. Get on board and save your favorites.';
     const opts = `
       height=500,width=500,
       left=100,top=100,
@@ -52,7 +52,7 @@ class Header extends React.PureComponent<T.Props, T.State> {
 
     return (
       <S.Root>
-        <S.Logo>Frontmarks</S.Logo>
+        <S.Logo to="/">Frontmarks</S.Logo>
         <S.Actions>
           <Group inline>
             <Button

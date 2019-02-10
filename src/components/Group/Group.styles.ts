@@ -18,6 +18,10 @@ export const Root = styled.div`
       vertical-align: top;
       margin-top: 0;
       margin-right: ${spacing.dp2}px;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   `}
 `;

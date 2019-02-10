@@ -1,4 +1,4 @@
-export type Name = 'twitter' | 'heart' | 'heart-border';
+export type Name = 'twitter' | 'heart' | 'heart-border' | 'menu';
 
 export type Props = {
   name: Name,
