@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./src/public/js/",
+    "outDir": "./public/js/",
     "sourceMap": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
