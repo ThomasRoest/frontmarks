@@ -6,7 +6,7 @@ import { FAVORITES } from 'constants/lsKeys';
 
 export default () => {
   const favorites = getValue(FAVORITES);
-  const items =  favorites ? response.filter(item => favorites.includes(item.id)) : [];
+  const items = favorites ? response.filter(item => favorites.includes(item.id)) : [];
 
   return <ResourcesList items={items} />;
 };

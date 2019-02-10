@@ -4,6 +4,7 @@ import { colors, fontSets, font, radius, spacing } from 'styles/variables';
 
 export const Top = styled.div`
   position: relative;
+  z-index: 5;
   padding-top: 100%;
   background: #fff;
   border: 1px solid ${colors.grayLight};
@@ -12,6 +13,7 @@ export const Top = styled.div`
   margin-bottom: ${spacing.dp4}px;
   transition: 0.15s ease-in-out;
   transition-property: transform, box-shadow;
+  pointer-events: none;
 `;
 
 export const Image = styled.img`
@@ -85,7 +87,7 @@ export const Tag = styled.div`
 
 export const Like = styled.div`
   position: absolute;
-  z-index: 3;
+  pointer-events: all;
   color: ${colors.white};
   right: ${spacing.dp2}px;
   bottom: ${spacing.dp2}px;

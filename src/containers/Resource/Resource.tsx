@@ -20,9 +20,9 @@ class Resource extends React.PureComponent<T.Props, T.State> {
     const { data } = this.props;
     const value = getValue(FAVORITES) || [];
 
-    setValue(FAVORITES,[...value, data.id]);
+    setValue(FAVORITES, [...value, data.id]);
     this.setState({ liked: true });
-  };
+  }
 
   handleDislike = () => {
     const { data } = this.props;
@@ -32,11 +32,12 @@ class Resource extends React.PureComponent<T.Props, T.State> {
 
     setValue(FAVORITES, value.filter((id: string) => id !== data.id));
     this.setState({ liked: false });
-  };
+  }
 
   render() {
     const { liked } = this.state;
     const { data } = this.props;
+    const href = `${data.href}?ref=frontmarks`;
 
     return (
       <ResourceComponent
@@ -44,13 +45,13 @@ class Resource extends React.PureComponent<T.Props, T.State> {
         src={data.src}
         title={data.title}
         text={data.text}
-        href={data.href}
+        href={href}
         tags={data.tags}
         liked={liked}
         onLike={this.handleLike}
         onDislike={this.handleDislike}
       />
-    )
+    );
   }
 }
 
