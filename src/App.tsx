@@ -30,7 +30,7 @@ class App extends React.Component {
               <a href="https://github.com/BananaBobby/frontmarks/blob/master/README.md#contribution" target="_blank">
                 Contribute
               </a>
-              🎉
+              &nbsp;🎉
             </div>
             <div>
               Built by <a href="https://twitter.com/blv_dmitry" target="_blank">Dmitry Belyaev</a>
