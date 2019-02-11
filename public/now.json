@@ -1,5 +1,11 @@
 {
   "version": 2,
   "name": "frontmarks",
-  "alias": ["frontmarks.com", "www.frontmarks.com"]
+  "alias": ["frontmarks.com", "www.frontmarks.com"],
+  "routes": [
+    { "src": "/img/(.*)", "dest": "/img/$1" },
+    { "src": "/js/(.*)", "dest": "/js/$1" },
+    { "src": "/favicon.png", "dest": "/favicon.png" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
 }
