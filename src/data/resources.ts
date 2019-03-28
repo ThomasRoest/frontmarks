@@ -639,6 +639,13 @@ const designFreebies: ResourceDict = getDict([{
 }]);
 
 const frontendNews: ResourceDict = getDict([{
+    id: '27',
+    title: 'Frontend Focus',
+    text: 'A once–weekly roundup of the best front-end news, articles and tutorials. HTML, CSS, WebGL, Canvas, browser tech, and more.',
+    href: 'https://frontendfoc.us/',
+    src: '/img/logos/frontend-news/frontend-focus.svg',
+    sectionId: ids.frontendNews,
+  }, {
   id: '26',
   title: 'Frontend Weekly',
   text: 'The best articles, links and news related to Frontend Development delivered once a week to your inbox.',
